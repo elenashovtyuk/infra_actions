@@ -81,6 +81,6 @@ jobs:
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/infra_actions
-          #остановка всех контейнеров
+          # остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
           sudo docker run --rm -d -p 5002:5002 ${{ secrets.DOCKER_USERNAME }}/infra_actions
