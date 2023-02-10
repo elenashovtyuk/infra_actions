@@ -65,7 +65,8 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/infra_actions:latest
-# инструкции для скачивания обновленного образа на боевой сервер и запуска контейнера
+# инструкции для скачивания обновленного образа
+# на боевой сервер и запуска контейнера
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
